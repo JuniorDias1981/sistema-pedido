@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedido de Rações</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Biblioteca jsPDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <!-- Logo no Topo -->
+  <header class="header">
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo do Sistema de Pedidos">
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <div class="container">
+    <h1>Pedido de Rações:</h1>
+
+    <!-- Botão Tutorial -->
+    <div class="tutorial-button">
+      <button id="abrirTutorial">Tutorial de Uso</button>
+    </div>
+
+    <!-- Campo de Seleção de Categoria -->
+    <br><label for="categoriaSelect">Selecione uma Categoria:</label>
+    <select id="categoriaSelect">
+      <option value="">Todas as Categorias</option>
+      <option value="Standard">Standard</option>
+      <option value="Premium">Premium</option>
+      <option value="PremiumEspecial">Premium Especial</option>
+      <option value="SuperPremium">Super Premium</option>
+      <option value="Sache">Sache</option>
+    </select>
+
+    <!-- Formulário de Pedido -->
+    <form id="pedidoForm">
+      <br><label for="nomeCliente">Nome do Cliente:</label>
+      <br><input type="text" id="nomeCliente" name="nomeCliente" placeholder="Digite seu nome">
+
+      <!-- Campo de Observações -->
+      <br><label for="observacoes">Observações:</label>
+      <br><textarea id="observacoes" name="observacoes" rows="3" placeholder="Digite suas observações aqui..."></textarea>
+
+      <br><br><button type="button" id="limparCampos">Limpar Todos os Campos</button>
+      
+      <!-- Título Centralizado -->
+      <h2 style="text-align: center;">Selecione os Produtos:</h2>
+
+      <!-- Categoria: Standard -->
+      <fieldset id="Standard">
+        <legend>Standard</legend>
+        <table>
+          <thead>
+            <tr>
+              <th>Produto</th>
+              <th>Estoque Disponível</th>
+              <th>Pedido</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><label><input type="checkbox" name="produto" value="Standard 1kg">Standard 1kg</label></td>
+              <td><input type="number" min="0" placeholder="Digite a quantidade disponível"></td>
+              <td><input type="number" min="0" placeholder="Digite a quantidade desejada"></td>
+            </tr>
+            <tr>
+              <td><label><input type="checkbox" name="produto" value="Standard 5kg">Standard 5kg</label></td>
+              <td><input type="number" min="0" placeholder="Digite a quantidade disponível"></td>
+              <td><input type="number" min="0" placeholder="Digite a quantidade desejada"></td>
+            </tr>
+            <tr>
+              <td><label><input type="checkbox" name="produto" value="Standard 15kg">Standard 15kg</label></td>
+              <td><input type="number" min="0" placeholder="Digite a quantidade disponível"></td>
+              <td><input type="number" min="0" placeholder="Digite a quantidade desejada"></td>
+            </tr>
+          </tbody>
+        </table>
+      </fieldset>
+<!-- Categoria: Premium -->
+      <fieldset id="Premium">
+        <legend>Premium</legend>
+        <table>
+          <thead>
+            <tr>
+              <th>Produto</th>
+              <th>Estoque Disponível</th>
+              <th>Pedido</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><label><input type="checkbox" name="produto" value="Premium 1kg"> Premium 1kg</label></td>
+              <td><input type="number" min="0" placeholder="Digite a quantidade disponível"></td>
+              <td><input type="number" min="0" placeholder="Digite a quantidade desejada"></td>
+            </tr>
+            <tr>
+              <td><label><input type="checkbox" name="produto" value="Premium 5kg">Premium 5kg</label></td>
+              <td><input type="number" min="0" placeholder="Digite a quantidade disponível"></td>
+              <td><input type="number" min="0" placeholder="Digite a quantidade desejada"></td>
+            </tr>
+            <tr>
+              <td><label><input type="checkbox" name="produto" value="Premium 15kg">Premium 15kg</label></td>
+              <td><input type="number" min="0" placeholder="Digite a quantidade disponível"></td>
+              <td><input type="number" min="0" placeholder="Digite a quantidade desejada"></td>
+            </tr>
+          </tbody>
+        </table>
+      </fieldset>
+<!-- Categoria: PremiumEspecial -->
+      <fieldset id="PremiumEspecial">
+        <legend>Premium Especial</legend>
+        <table>
+          <thead>
+            <tr>
+              <th>Produto</th>
+              <th>Estoque Disponível</th>
+              <th>Pedido</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><label><input type="checkbox" name="produto" value="Premium Especial 1kg">Premium Especial 1kg</label></td>
+              <td><input type="number" min="0" placeholder="Digite a quantidade disponível"></td>
+              <td><input type="number" min="0" placeholder="Digite a quantidade desejada"></td>
+            </tr>
+            <tr>
+              <td><label><input type="checkbox" name="produto" value="Premium Especial 5kg">Premium Especial 5kg</label></td>
+              <td><input type="number" min="0" placeholder="Digite a quantidade disponível"></td>
+              <td><input type="number" min="0" placeholder="Digite a quantidade desejada"></td>
+            </tr>
+            <tr>
+              <td><label><input type="checkbox" name="produto" value="Premium Especial 15kg">Premium Especial 15kg</label></td>
+              <td><input type="number" min="0" placeholder="Digite a quantidade disponível"></td>
+              <td><input type="number" min="0" placeholder="Digite a quantidade desejada"></td>
+            </tr>
+          </tbody>
+        </table>
+      </fieldset>
+<!-- Categoria: SuperPremium -->
+      <fieldset id="SuperPremium">
+        <legend>Super Premium</legend>
+        <table>
+          <thead>
+            <tr>
+              <th>Produto</th>
+              <th>Estoque Disponível</th>
+              <th>Pedido</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><label><input type="checkbox" name="produto" value="Super Premium 1kg">Super Premium 1kg</label></td>
+              <td><input type="number" min="0" placeholder="Digite a quantidade disponível"></td>
+              <td><input type="number" min="0" placeholder="Digite a quantidade desejada"></td>
+            </tr>
+            <tr>
+              <td><label><input type="checkbox" name="produto" value="Super Premium 5kg">Super Premium 5kg</label></td>
+              <td><input type="number" min="0" placeholder="Digite a quantidade disponível"></td>
+              <td><input type="number" min="0" placeholder="Digite a quantidade desejada"></td>
+            </tr>
+            <tr>
+              <td><label><input type="checkbox" name="produto" value="Super Premium 15kg">Super Premium 15kg</label></td>
+              <td><input type="number" min="0" placeholder="Digite a quantidade disponível"></td>
+              <td><input type="number" min="0" placeholder="Digite a quantidade desejada"></td>
+            </tr>
+          </tbody>
+        </table>
+      </fieldset>
+<!-- Categoria: Sache -->
+      <fieldset id="Sache">
+        <legend>Sache</legend>
+        <table>
+          <thead>
+            <tr>
+              <th>Produto</th>
+              <th>Estoque Disponível</th>
+              <th>Pedido</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><label><input type="checkbox" name="produto" value="Sache unidade">Sache unidade</label></td>
+              <td><input type="number" min="0" placeholder="Digite a quantidade disponível"></td>
+              <td><input type="number" min="0" placeholder="Digite a quantidade desejada"></td>
+            </tr>
+            <tr>
+              <td><label><input type="checkbox" name="produto" value="Sache caixa com 18">Sache caixa com 18</label></td>
+              <td><input type="number" min="0" placeholder="Digite a quantidade disponível"></td>
+              <td><input type="number" min="0" placeholder="Digite a quantidade desejada"></td>
+            </tr>
+            <tr>
+              <td><label><input type="checkbox" name="produto" value="Sache">Sache</label></td>
+              <td><input type="number" min="0" placeholder="Digite a quantidade disponível"></td>
+              <td><input type="number" min="0" placeholder="Digite a quantidade desejada"></td>
+            </tr>
+          </tbody>
+        </table>
+      </fieldset>
+
+      <!-- Outras Categorias... -->
+
+      <!-- Botões -->
+      <div class="botoes">
+        <button type="button" id="enviarWhatsApp">Enviar pedido</button>
+        <button type="button" id="salvarPDFSemEstoque">Salvar PDF pedido</button>
+        <button type="button" id="salvarPDFCompleto">Salvar PDF anotação</button>
+        <button type="button" id="conferirPedido">Conferir Pedido</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Resumo do Pedido</h2>
+      <div id="modal-body">
+        <!-- Conteúdo dinâmico será inserido aqui -->
+      </div>
+      <button id="fecharModal">Fechar</button>
+    </div>
+  </div>
+
+  <!-- Botão "Voltar ao Topo" -->
+  <button id="voltarAoTopo" class="btn-voltar-topo">Voltar ao Topo</button>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <p>
+      Contato: 
+      <a href="mailto:jrdias32@gmail.com">jrdias32@gmail.com</a> | 
+      <a href="https://jrmanutencao.netlify.app/" target="_blank">JRmanutenção</a>
+    </p>
+    <p>&copy; 2025 JR Manutenção</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

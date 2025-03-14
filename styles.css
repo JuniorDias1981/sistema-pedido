@@ -1,0 +1,310 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9fafb;
+  color: #1f2937;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Header com a logo */
+.header {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.header .logo img {
+  max-width: 100px;
+  height: auto;
+}
+
+/* Centralizar o título "Selecione os Produtos:" */
+h2 {
+  font-size: 1.5rem;
+  color: #3b82f6;
+  margin-bottom: 15px;
+  text-align: center; /* Centralizado */
+}
+
+/* Botão Tutorial */
+.tutorial-button {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#abrirTutorial {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #3b82f6;
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+#abrirTutorial:hover {
+  transform: scale(1.05);
+  background-color: #4f46e5;
+}
+/* Estilo para o campo de observações */
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  resize: vertical; /* Permite redimensionar verticalmente */
+  transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+  border-color: #3b82f6;
+  outline: none;
+}
+/* Botão Voltar ao Topo */
+.btn-voltar-topo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #10b981;
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  display: none; /* Inicialmente oculto */
+}
+
+.btn-voltar-topo:hover {
+  transform: scale(1.05);
+  background-color: #059669;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2rem;
+  color: #1f2937;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #3b82f6;
+  margin-bottom: 15px;
+}
+
+/* Estilo para o <legend> */
+fieldset {
+  border: 1px solid #d1d5db; /* Borda suave para o fieldset */
+  border-radius: 8px; /* Bordas arredondadas */
+  margin-bottom: 20px; /* Espaçamento entre os fieldsets */
+  padding: 10px; /* Espaçamento interno */
+}
+
+legend {
+  font-size: 1.25rem; /* Tamanho maior para destaque */
+  font-weight: bold; /* Negrito para melhorar a legibilidade */
+  color: #ffffff; /* Texto branco */
+  background-color: #1e3a8a; /* Fundo azul */
+  padding: 10px 20px; /* Espaçamento interno para o texto */
+  border-radius: 5px; /* Bordas arredondadas */
+  text-align: center; /* Centralizar o texto */
+  width: auto; /* Largura ajustada ao conteúdo */
+  margin: 0 auto; /* Centralizar horizontalmente */
+  display: block; /* Garantir que o legend seja tratado como um bloco */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+  background-color: #f3f4f6;
+  color: #1f2937;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #3b82f6;
+  outline: none;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.botoes {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button#enviarWhatsApp {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+button#salvarPDFSemEstoque,
+button#salvarPDFCompleto {
+  background-color: #10b981;
+  color: #ffffff;
+}
+
+button#limparCampos {
+  background-color: #ef4444;
+  color: #ffffff;
+}
+
+button#conferirPedido {
+  background-color: #fbbf24;
+  color: #1f2937;
+}
+
+/* Modal */
+/* Estilo do Modal */
+.modal {
+  display: none; /* Oculto por padrão */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow-y: auto; /* Adiciona rolagem vertical ao modal se o conteúdo for muito grande */
+}
+
+.modal-content {
+  background-color: #ffffff;
+  margin: 5% auto; /* Centralizado verticalmente */
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%; /* Largura responsiva */
+  max-width: 600px; /* Largura máxima */
+  max-height: 80vh; /* Altura máxima para evitar ultrapassar a tela */
+  overflow-y: auto; /* Barra de rolagem interna para conteúdo grande */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  color: #6b7280;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #1f2937;
+}
+
+#modal-body {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-height: 400px; /* Altura máxima para o corpo do modal */
+  overflow-y: auto; /* Barra de rolagem interna */
+}
+
+/* Rodapé */
+.footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #3b82f6; /* Azul */
+  color: #ffffff; /* Branco */
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: #ffffff; /* Links brancos */
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+
+  input[type="text"],
+  input[type="number"] {
+    font-size: 0.9rem;
+  }
+
+  .botoes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

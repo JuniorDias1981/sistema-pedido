@@ -1,0 +1,190 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+/* Estilo geral para o botão vazado */
+.btn-vazado {
+display: inline-block;
+padding: 10px 20px;
+font-size: 1rem;
+font-weight: bold;
+color: #3b82f6; /* Cor do texto (azul) */
+background-color: transparent; /* Fundo transparente */
+border: 2px solid #1e3a8a; /* Borda azul */
+border-radius: 5px;
+text-decoration: none; /* Remove sublinhado do link */
+transition: all 0.3s ease; /* Transição suave */
+text-align: center;
+}
+
+/* Efeito de hover no botão */
+.btn-vazado:hover {
+color: #ffffff; /* Texto branco ao passar o mouse */
+background-color: #3b82f6; /* Fundo azul ao passar o mouse */
+}
+
+/* Posicionamento do botão "INÍCIO" */
+.inicio-button {
+text-align: center; /* Centraliza o botão */
+margin-top: 20px; /* Espaçamento superior */
+}
+textarea::placeholder {
+    color: #888;
+    font-style: italic;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.step-box {
+    background: #fff;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.qr-box {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.qr-box img {
+    max-width: 100%;
+    height: auto;
+}
+
+.checklist label {
+    display: block;
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+/* Estilo para o <legend> */
+fieldset {
+    border: 1px solid #d1d5db; /* Borda suave para o fieldset */
+    border-radius: 8px; /* Bordas arredondadas */
+    margin-bottom: 20px; /* Espaçamento entre os fieldsets */
+    padding: 10px; /* Espaçamento interno */
+  }
+  
+  legend {
+    font-size: 1.25rem; /* Tamanho maior para destaque */
+    font-weight: bold; /* Negrito para melhorar a legibilidade */
+    color: #ffffff; /* Texto branco */
+    background-color: #1e3a8a; /* Fundo azul */
+    padding: 10px 20px; /* Espaçamento interno para o texto */
+    border-radius: 5px; /* Bordas arredondadas */
+    text-align: center; /* Centralizar o texto */
+    width: auto; /* Largura ajustada ao conteúdo */
+    margin: 0 auto; /* Centralizar horizontalmente */
+    display: block; /* Garantir que o legend seja tratado como um bloco */
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  th {
+    background-color: #f3f4f6;
+    color: #1f2937;
+    font-weight: bold;
+  }
+  
+
+/* Estilo geral para todos os botões */
+button {
+padding: 12px;
+text-align: center;
+font-size: 1rem;
+display: block;
+width: 100%;
+margin: 10px 0;
+border: none;
+border-radius: 5px;
+color: #ffffff; /* Texto branco para contraste */
+cursor: not-allowed; /* Indica que o botão não é clicável */
+box-shadow: none; /* Remove sombras para um visual mais limpo */
+transition: none; /* Remove transições */
+}
+
+/* Botão "Conferir Pedido" */
+.btn-conferir-pedido {
+background-color: #fbbf24; /* Amarelo */
+}
+
+/* Botão "Enviar Pedido" */
+.btn-enviar-pedido {
+background-color: #3b82f6; /* Azul */
+}
+
+/* Botão "Salvar PDF Pedido" */
+.btn-salvar-pdf-pedido {
+background-color: #10b981; /* Verde */
+}
+
+/* Botão "Salvar PDF Anotação" */
+.btn-salvar-pdf-anotacao {
+background-color: #10b981; /* Verde */
+}
+
+/* Estilo para o texto abaixo dos botões */
+.buttons p {
+font-size: 0.9rem;
+color: #333;
+margin-top: 5px;
+margin-bottom: 15px;
+}
+
+/* Estilo para as linhas separadoras */
+.buttons hr {
+border: 0;
+height: 1px;
+background-color: #ddd;
+margin: 15px 0;
+}
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}

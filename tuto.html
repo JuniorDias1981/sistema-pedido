@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Tutorial de Uso - Sistema de Pedidos</title>
+  
+</head>
+
+<body>
+    <div class="container">
+        <!-- Botão "INÍCIO" -->
+<div class="inicio-button">
+    <a href="index.html" class="btn-vazado">INÍCIO</a>
+</div>
+        <h2>Tutorial de Uso - Sistema de Pedidos</h2>
+        <p>Este tutorial explica como utilizar o sistema de pedidos passo a passo.</p>
+        <p>O cliente recebe um adesivo com QR code com link para o site do pedido, abaixo do QR code uma descrição com o endereço do site, abaixo nome do vendedor, empresa e contato.
+        </p>
+
+        <div class="qr-box">
+            
+            <img src="img/qr_code.png" alt="QR Code do Pedido">
+            <p><strong>Endereço do site:</strong> https://sistemapedido.netlify.app/</p>
+            <p><strong>Vendedor:</strong> Junior Dias</p>
+            <p><strong>Empresa:</strong> Pet Shop </p>
+            <p><strong>Contato:</strong> (22) 997407901</p>
+        </div>
+
+        <div class="step-box">
+            <h3>Passo 1: Seleção de Itens</h3>
+
+            <p>Se necessario, navegue atraves das categorias, Marque os itens desejados, informe a quantidade disponível em estoque e a quantidade que deseja pedir.
+            </p>
+
+            <!-- Campo de Seleção de Categoria -->
+    <br><label for="categoriaSelect">Selecione uma Categoria:</label>
+   <br><select id="categoriaSelect">
+      <option value="">Todas as Categorias</option>
+      <option value="Standard">Standard</option>
+      <option value="Premium">Premium</option>
+      <option value="PremiumEspecial">Premium Especial</option>
+      <option value="SuperPremium">Super Premium</option>
+     </select><br>
+
+            <fieldset id="Standard">
+                <legend>Standard</legend>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Produto</th>
+                      <th>Estoque Disponível</th>
+                      <th>Pedido</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><label><input type="checkbox" name="produto" value="Standard 1kg">Standard 1kg</label></td>
+                      <td><input type="number" min="0" placeholder="Digite a quantidade disponível"></td>
+                      <td><input type="number" min="0" placeholder="Digite a quantidade desejada"></td>
+                    </tr>
+            </table>
+        </div>
+
+        <div class="step-box">
+            <h3>Passo 2: Observações</h3>
+            <p>Adicione observações, caso necessário (ex: troca de produto).</p>
+            <textarea rows="4" placeholder="Digite aqui suas observações..."></textarea>
+        </div>
+
+        <div class="step-box">
+            <h3>Passo 3: Ações do Pedido</h3>
+            <p>Após selecionar os itens, utilize os botões para Conferir Pedido, Enviar pedido, Salvar pedido em PDF ou Salvar toda a anotção em PDF.</p>
+                <div class="buttons">
+                    <button class="btn-conferir-pedido">Conferir Pedido</button>
+                    <p>Mostra um resumo do que está sendo pedido.</p>
+                    <hr>
+                    <button class="btn-enviar-pedido">Enviar pedido</button>
+                    <p>Envia o pedido para o vendedor (sem incluir estoque).</p>
+                    <hr>
+                    <button class="btn-salvar-pdf-pedido">Salvar PDF pedido</button>
+                    <p>Baixa um PDF com uma cópia do pedido (sem estoque).</p>
+                    <hr>
+                    <button class="btn-salvar-pdf-anotacao">Salvar PDF anotação</button>
+                    <p>Baixa um PDF com todos os detalhes do pedido, incluindo estoque.</p>
+                    <hr>
+                </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
